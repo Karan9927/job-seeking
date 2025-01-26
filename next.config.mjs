@@ -1,3 +1,10 @@
+let userConfig = undefined;
+try {
+  userConfig = await import("./user-next.config"); // Generalized user config file
+} catch (e) {
+  // Ignore error if the file doesn't exist
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
